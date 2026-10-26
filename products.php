@@ -43,10 +43,10 @@ ob_start();
                     <label for="brand" class="form-label">Brand <span class="text-danger" aria-hidden="true">*</span></label>
                     <select name="product_brand" id="brand" class="form-select" required>
                         <option value="">Select Brand</option>
-                        <option value="Cervelo">Cervelo</option>
-                        <option value="Geometric">Geometric</option>
-                        <option value="Tecc">Tecc</option>
-                        <option value="Nosh">Nosh</option>
+                        <option value="PetSafe">PetSafe</option>
+                        <option value="Luwei">Luwei</option>
+                        <option value="Pawise">Pawise</option>
+                        <option value="Petlove">Petlove</option>
                     </select>
                 </div>
  
@@ -60,16 +60,16 @@ ob_start();
                 </div>
  
                 <div class="col-md-3">
-                    <label for="year" class="form-label">Manufacturing Year <span class="text-danger" aria-hidden="true">*</span></label>
-                    <select name="product_year" id="year" class="form-select" required>
-                        <option value="">Select Year</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
+                    <label for="product_Material" class="form-label">Material<span class="text-danger" aria-hidden="true">*</span></label>
+                    <select name="product_Material" id="product_Material" class="form-select" required>
+                        <option value="">Select Material</option>
+                        <option value="Silicone">Silicone</option>
+                        <option value="Rubber">Rubber</option>
+                        <option value="BPA-free Plastic">BPA-free Plastic</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Wood">Wood</option>
+                        <option value="Fabric">Fabric</option>
+                        
                     </select>
                 </div>
                  
@@ -128,9 +128,9 @@ ob_start();
                 <tbody>
                     <tr>
                         <td>P001</td>
-                        <td>Road Bike</td>
-                        <td>$1,200.00</td>
-                        <td>Cervelo</td>
+                        <td>pet slow feeder</td>
+                        <td>$200.00</td>
+                        <td>PetFun</td>
                         <td>
                             <a href="#" class="btn btn-sm btn-warning">
                                 <i class="bi bi-pencil"></i>
