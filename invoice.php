@@ -67,29 +67,25 @@ ob_start();
                 <tfoot><tr><th colspan="4" class="text-end">Grand Total</th><th class="text-end">$1,200.00</th></tr></tfoot>
             </table>
         </div>
-        <a href=" " class="btn btn-secondary no-print"><i class="bi bi-arrow-left me-1"></i>Back to Details</a >
+        <a href="orderdetails.php" class="btn btn-secondary no-print"><i class="bi bi-arrow-left me-1"></i>Back to Details</a >
     </div>
 </div>
  
 <style>
 @media print {
-    /* 隐藏侧边栏、汉堡菜单 */
     .sidebar,
     .hamburger,
     .no-print {
         display: none !important;
     }
-    /* 清除卡片边框、阴影 */
     .card {
         border: none !important;
         box-shadow: none !important;
     }
-    /* 让深色表头可以打印出来（重点！Chrome默认不打印背景） */
     .table-dark {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
-    /* 页面白底，去掉边距 */
     body {
         background: #fff !important;
     }
