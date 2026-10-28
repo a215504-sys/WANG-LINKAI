@@ -2,87 +2,111 @@
 ob_start();
 ?>
 
-<div class="container mt-4">
-    <!-- 欢迎横幅，带渐变+动画 -->
-    <div class="card shadow border-0 mb-4" style="background: linear-gradient(135deg, #0d6efd, #0099ff); color:white;">
-        <div class="card-body text-center py-5">
-            <h1 class="display-4 animate-fade">Welcome to My Company</h1>
-            <p class="lead mt-3 animate-fade-delay">Bicycle Sales Management System</p>
-            <hr class="my-4" style="border-color:#fff;">
-        </div>
-    </div>
-
-    <!-- 功能卡片，hover上浮效果 -->
-    <div class="row g-4">
-        <div class="col-md-3">
-            <div class="card h-100 shadow-sm card-hover">
-                <div class="card-body text-center py-4">
-                    <h3 class="text-primary">🚲</h3>
-                    <h5 class="mt-2">Products</h5>
-                    <p class="text-muted">Manage all bicycle products</p>
-                    <a href="products.php" class="btn btn-primary mt-2">Go to Products</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card h-100 shadow-sm card-hover">
-                <div class="card-body text-center py-4">
-                    <h3 class="text-success">👥</h3>
-                    <h5 class="mt-2">Customers</h5>
-                    <p class="text-muted">Customer information list</p>
-                    <a href="customers.php" class="btn btn-success mt-2">Go to Customers</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card h-100 shadow-sm card-hover">
-                <div class="card-body text-center py-4">
-                    <h3 class="text-warning">👨‍💼</h3>
-                    <h5 class="mt-2">Staffs</h5>
-                    <p class="text-muted">Staff management page</p>
-                    <a href="staffs.php" class="btn btn-warning mt-2">Go to Staffs</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card h-100 shadow-sm card-hover">
-                <div class="card-body text-center py-4">
-                    <h3 class="text-danger">📋</h3>
-                    <h5 class="mt-2">Orders</h5>
-                    <p class="text-muted">View and manage orders</p>
-                    <a href="orders.php" class="btn btn-danger mt-2">Go to Orders</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 底部装饰小区域 -->
-    <div class="mt-5 text-center text-muted">
-        <p>🚴 Explore our high quality bicycles 🚴</p>
-    </div>
-</div>
-
 <style>
-    /* 卡片悬浮上浮特效 */
-    .card-hover {
-        transition: all 0.3s ease;
+    body {
+        animation: fadeIn 0.6s ease-in-out;
     }
-    .card-hover:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
-    }
-    /* 淡入动画 */
-    .animate-fade {
-        animation: fadeIn 0.8s ease-in-out;
-    }
-    .animate-fade-delay {
-        animation: fadeIn 1.2s ease-in-out;
-    }
+
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(15px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .pet-card {
+        transition: all 0.3s ease;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .pet-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .welcome-banner {
+        background: linear-gradient(135deg, #ff9a8b, #ff6a88, #ffb199);
+        color: white;
+        border-radius: 16px;
+    }
+
+    .slow-feeder-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
     }
 </style>
+
+<div class="container mt-4">
+
+    <!-- Welcome Banner -->
+    <div class="card shadow border-0 mb-4 welcome-banner pet-card">
+        <div class="card-body text-center py-5">
+            <h1 class="display-4">Welcome to Pet Slow Feeder</h1>
+            <p class="lead mt-3">Healthy Eating, Happy Pets</p>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.6);">
+            <p class="mb-0">Manage your pet slow feeder products, customers and orders in one place.</p>
+        </div>
+    </div>
+
+   
+
+    <!-- Management Menu -->
+    <h3 class="mb-3">Management System</h3>
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm pet-card">
+                <div class="card-body text-center py-4">
+                    <h2>🥣</h2>
+                    <h5>Products</h5>
+                    <p class="text-muted">Manage pet slow feeder bowls, stock and pricing</p>
+                    <a href="products.php" class="btn btn-primary">Go to Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm pet-card">
+                <div class="card-body text-center py-4">
+                    <h2>🐾</h2>
+                    <h5>Customers</h5>
+                    <p class="text-muted">Manage customer information and buyer records</p>
+                    <a href="customers.php" class="btn btn-success">Go to Customers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm pet-card">
+                <div class="card-body text-center py-4">
+                    <h2>👨‍💼</h2>
+                    <h5>Staffs</h5>
+                    <p class="text-muted">Manage staff accounts and system access</p>
+                    <a href="staffs.php" class="btn btn-warning">Go to Staffs</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm pet-card">
+                <div class="card-body text-center py-4">
+                    <h2>📋</h2>
+                    <h5>Orders</h5>
+                    <p class="text-muted">View and process all customer orders</p>
+                    <a href="orders.php" class="btn btn-danger">Go to Orders</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <?php
 $content = ob_get_clean();
